@@ -40,9 +40,28 @@ AWS (Amazon Web Services) is a comprehensive and widely adopted cloud platform t
 
 <h3>Step 3: Sign into your AWS Instance and access the Server Manager </h3>
 
-- From your search bar once connected into your VM go to "Server Maanger"
+- Click into Instances and get your Instance running
+- then click connect
+
+![Screenshot 2024-12-04 174415](https://github.com/user-attachments/assets/9e7ed69d-7876-4b4a-abd8-3e1158089d41)
+
+![Screenshot 2024-12-04 174422](https://github.com/user-attachments/assets/4ef0b68a-565a-4126-a96f-04f9f7b2151e)
+
+
+- Click RDP Client
+- Click get Password - (when you created your Instance you should have created Key-Pairs which created a file)
+- You will will use that file and AWS will decrpyt the file
+- Then it will give you the password
+- Copy the public IP
+- by defualt the Username is "Administrator"
+- Use the decrptyed password to login RDP
+  
+![Screenshot 2024-12-04 174430](https://github.com/user-attachments/assets/ce5c1ed5-45a4-49a9-b0e6-982716eeab31)
+
+
+- From your search bar once connected into your Instance go to "Server Maanger"
 - Click into files and Storage services
-- 
+
 ![Screenshot 2024-12-04 171641](https://github.com/user-attachments/assets/c4eda0f3-b4af-4eea-b102-5fe32eedeac3)
 
 
@@ -60,45 +79,27 @@ AWS (Amazon Web Services) is a comprehensive and widely adopted cloud platform t
 
 ![Screenshot 2024-12-04 172320](https://github.com/user-attachments/assets/910e5bc2-eb93-472a-b026-bfb2b79f1bec)
 
+- Add the number of GB you are adding 
+- Click "Next" 
+
+![Screenshot 2024-12-04 172333](https://github.com/user-attachments/assets/e8129a30-3b50-4802-bf2b-df1f4abd3a35)
+
+- Add the Path of the File in this case I chose "E"
+- Click "Next"
+
+![Screenshot 2024-12-04 172349](https://github.com/user-attachments/assets/4591a1ec-ea29-4123-acbf-5c7ad71855e3)
 
 
-<h3>Step 2: Create an IAM User with Amazon S3 Access</h3>
+- Click "Create"
 
-- Go to the search bar at the top and search "IAM"
-- Select Users tab to the left 
-- You will need to name the user JohnDoe 
-- Then click create passwordd
--  Create a Custom password and follow the rules and unclick "User has to reset password on next login" 
+![Screenshot 2024-12-04 172403](https://github.com/user-attachments/assets/fc88fea6-4006-45b2-bd7c-9c209e972116)
 
- 
-![Screenshot 2024-12-04 143727](https://github.com/user-attachments/assets/fe05ddf6-bafa-43a4-9ef8-0cad535fc875)
+- Once the creation is complete and successful
+- Go to your folders tab on your task bar
+- Go to Pc
+- there should be your new volume you created "New Volume"
 
-
+![Screenshot 2024-12-04 172457](https://github.com/user-attachments/assets/566dc2a3-1c13-42cd-928e-7b51b15a693d)
 
 
 
-<h3>Step 3: Set Permissions to the IAM USer "JohnDoe" </h3>
-
-- Click custom policy
-- then click the Permissions Policy
-- Select or Search Amazon S3 Access 
-- You will need to select amazon S3 Access
-- Then click Next 
- 
-
-![Screenshot 2024-12-04 143953](https://github.com/user-attachments/assets/d636cb79-6e74-4a8b-b859-0fb763253c10)
-
-<h3>Step 4: Confirm IAM User</h3>
-     
-- Copy the sign in link provided for IAM User into another browser 
-
-![Screenshot 2024-12-04 144025](https://github.com/user-attachments/assets/962700ee-03ea-4240-9961-83db19d8fb90)
-
-- Log into the IAM user with the Username and Password created
-    - The number you see attatched in the login screen is the number assocaited with your root account 
-
-![Screenshot 2024-12-04 145254](https://github.com/user-attachments/assets/8589c3a8-f924-461d-a997-695276fa8a55)
-
-- As seen in the third picture below the "JohnDoe" account has permission restrictions flagged on his/her dashboard upon launch
-
-![Screenshot 2024-12-04 145335](https://github.com/user-attachments/assets/5bfff862-501b-48ce-b18a-97467e75497a)
